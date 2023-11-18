@@ -53,8 +53,8 @@ const Navbar = () => {
         <div>
           <img 
             src={profile} 
-            alt="menu" 
-            className='w-[32px] h-[32px] object-contain cursor-pointer' 
+            alt="profile" 
+            className='hidden sm:flex w-[32px] h-[32px] object-contain cursor-pointer' 
             onClick={()=>setProfToggle(!profToggle)}
           />
           <div className={`${!profToggle? "hidden" : "flex"} p-4 black-gradient absolute mx-0 my-2 min-w-[140px] z-10 rounded-xl` } >
