@@ -33,7 +33,7 @@ const Navbar = () => {
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <div className='flex gap-3'>
-          <Link to="/Portfolio" 
+          <Link to="/Portfolio/" 
             className='flex items-center gap-2' 
             onClick={()=>
               { setActive("");
@@ -51,20 +51,20 @@ const Navbar = () => {
 
 
         <div>
-            <img 
-              src={profile} 
-              alt="menu" 
-              className='w-[32px] h-[32px] object-contain cursor-pointer' 
-              onClick={()=>setProfToggle(!profToggle)}
-            />
-            <div className={`${!profToggle? "hidden" : "flex"} p-4 black-gradient absolute mx-0 my-2 min-w-[140px] z-10 rounded-xl` } >
-                <div className='flex gap-5 cursor-pointer'>
-                  {socials.map((social, index) => (
-                    <SocialsCard key={index} {...social} />
-                  ))}
-                </div>
-            </div>
+          <img 
+            src={profile} 
+            alt="menu" 
+            className='w-[32px] h-[32px] object-contain cursor-pointer' 
+            onClick={()=>setProfToggle(!profToggle)}
+          />
+          <div className={`${!profToggle? "hidden" : "flex"} p-4 black-gradient absolute mx-0 my-2 min-w-[140px] z-10 rounded-xl` } >
+              <div className='flex gap-5 cursor-pointer'>
+                {socials.map((social, index) => (
+                  <SocialsCard key={index} {...social} />
+                ))}
+              </div>
           </div>
+        </div>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link)=>{
